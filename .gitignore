@@ -1,0 +1,6 @@
+screenshots
+node_modules
+cypress.config.js
+package.json
+yarn.lock
+body_login.json
