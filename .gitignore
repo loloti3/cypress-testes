@@ -4,3 +4,4 @@ cypress.config.js
 package.json
 yarn.lock
 body_login.json
+body_user.json

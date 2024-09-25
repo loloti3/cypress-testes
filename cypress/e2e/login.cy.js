@@ -1,5 +1,7 @@
+import { faker } from '@faker-js/faker';
 let Token;
 let iduser;
+
 
 function fazerLogin(dados) {
   cy.fixture("config.json").then((url)=> {
@@ -21,11 +23,10 @@ it('fazer login com admin', () => {
   });
 });
 
-it('criar e deletar usuario', () => {
+it.only('criar e deletar usuario',() => {
   cy.fixture('config.json').then((url)=>{
     cy.fixture('body_user.json').then((dados) => {
-      dados.mail = "";
-      dados.cpf = '';
+      dados.mail =faker.internet.email();
       cy.request({
         method: 'POST',
         url: `${url.servidor}${url.user}`,
@@ -35,8 +36,7 @@ it('criar e deletar usuario', () => {
         body: dados
       }).then((response) => {
         expect(response.status).to.eq(201);
-        iduser = response.body.user._id;
-        
+        iduser = response.body.user._id;        
         cy.request({
           method: 'DELETE',
           url: `${url.servidor}${url.user}/${iduser}`,
