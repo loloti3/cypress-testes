@@ -15,7 +15,7 @@ cypress/
     ├── e2e/
     │   └── <arquivos de teste end-to-end>
     └── fixtures/
-        └── <arquivos de dados estáticos>
+        └── <arquivos de dados >
 ```
 
 - **cypress/e2e:** Contém os testes end-to-end que verificam o funcionamento do sistema como um todo.
