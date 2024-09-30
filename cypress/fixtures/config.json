@@ -1,5 +1,5 @@
 {
-    "servidor" : "https://suits.qacoders-academy.com.br", 
+    "servidor" : "https://suits.qacoders.dev.br", 
     "login" : "/api/login",
     "user" : "/api/user"
     

@@ -23,7 +23,7 @@ it('fazer login com admin', () => {
   });
 });
 
-it.only('criar e deletar usuario',() => {
+it('criar e deletar usuario',() => {
   cy.fixture('config.json').then((url)=>{
     cy.fixture('body_user.json').then((dados) => {
       dados.mail =faker.internet.email();
